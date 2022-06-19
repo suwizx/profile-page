@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>สุวิจักขณ์ พรหมสถิตย์ - Suwijak Promsatid</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="shortcut icon" href="https://suwizx.com/wp-content/uploads/2021/10/222480414_871603333768925_176828813786078585_n.jpg" type="image/x-icon">
 </head>
 
-<body>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 *{
     border: 0;
     padding: 0;
@@ -20,6 +20,23 @@
     font-weight: 400;
     transition: .2s;
 }
+
+:root{
+    --primary-color: #f37335;
+    --text-color:#000;
+    --text-color-second:#f37335;
+    --background:#fff;
+    --background-second:#C0C0C0;
+}
+
+[data-theme="dark"]{
+    --primary-color:#f37335;
+    --text-color:#fff;
+    --text-color-second:#f37335;
+    --background:#141416;
+    --background-second:#fff;
+}
+
 
 @media only screen and (max-width: 600px) {
     .main{
@@ -47,8 +64,69 @@
     }
 }
 
+h1,h2,h3,h4,h5,h6,p,button,::marker{
+    color: var(--text-color);
+}
+
 body{
     background-image :linear-gradient(90deg, #fdc830, #f37335);
+}
+
+.theme-switch-container{
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    right: 25px;
+    bottom: 30px;
+    background-color: var(--background);
+    padding: 10px;
+    border-radius: 10px ;
+}
+.theme-switch-container span{
+    margin-right: 10px;
+    font-size:1rem;
+    color: var(--text-color);
+}
+
+.theme-switch{
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+.theme-switch input{
+    display: none;
+}
+
+.slider{
+    background:var(--primary-color);
+    bottom: 0;
+    cursor: pointer;
+    left:0;
+    position: absolute;
+    right:0;
+    top:0;
+    transition: 0.4s;
+}
+.slider::before{
+    background:#fff;
+    content: "";
+    bottom: 4px;
+    height: 26px;
+    left:4px;
+    position: absolute;
+    transition: 0.4s;
+    width:26px;
+}
+input:checked +.slider::before{
+    transform: translateX(26px);
+}
+.slider.round{
+    border-radius: 34px;
+}
+.slider::before{
+    border-radius: 50%;
 }
 
 .main{
@@ -57,11 +135,11 @@ body{
     margin: 100px auto auto auto;
     max-width: 800px;
     padding: 40px;
-    background-color: #fff;
+    background-color: var(--background);
 }
 
 .imgprof{
-    border: solid #fff 5px;
+    border: solid var(--background) 5px;
     border-radius: 50%;
     background-repeat : no-repeat;
     background-size: cover;
@@ -80,7 +158,7 @@ body{
     justify-content: center;
     width: 100%;
     display: flex;
-    border-bottom: solid 1px #C0C0C0;
+    border-bottom: solid 1px var(--background-second);
 }
 
 #tab1,#tab2,#tab3{
@@ -88,12 +166,12 @@ body{
     padding: 8px 20px;
     font-size: 1.1em;
     background-color: transparent;
-    border-bottom: solid #fff 5px;
+    border-bottom: solid var(--background) 5px;
 }
 
 #tab1:hover,#tab2:hover,#tab3:hover{
-    border-bottom: solid #f37335 5px;
-    color: #f37335;
+    border-bottom: solid var(--primary-color) 5px;
+    color: var(--text-color-second);
     cursor: pointer;
 }
 
@@ -103,8 +181,8 @@ body{
 
 h2{
     padding-left:8px ;
-    border-left: solid #f37335 5px;
-    color: #f37335;
+    border-left: solid var(--primary-color) 5px;
+    color: var(--text-color-second);
 }
 
 .social{
@@ -134,9 +212,13 @@ h2{
 .fb,.ig,.tw,.yt{
     display: inline-flex;
     align-items: center;
-    color: #fff;
+    color: #fff!important;
     text-decoration: none;
     border-radius: 100px;
+}
+
+svg{
+    color: #fff;
 }
 
 .fb:hover,.ig:hover,.tw:hover,.yt:hover{
@@ -213,8 +295,21 @@ h2{
 a{
     color: #f37335;
 }
-    </style>
-    <div class="main">
+
+
+</style>
+
+<body>
+    <div class="theme-switch-container">
+        <span id="toggle-icon">
+            <i class="fas fa-sun"></i>
+        </span>
+        <label class="theme-switch">
+            <input type="checkbox">
+            <div class="slider round"></div>
+        </label>
+    </div>
+    <div class="main" id="bg">
         <div class="imgprof"></div>
         <div class="container">
             <h1 align="center" style="font-size : 1.875em;">สุวิจักขณ์ พรหมสถิตย์</h1>
@@ -317,7 +412,7 @@ a{
                 <h2>ผลงานเว็บไซต์</h2>
                 <div class="web">
                     <div class="webimg">
-                        <img src="https://suwizx.com/wp-content/uploads/2021/10/lnwtumweb-mockup-300x172.png" alt="">
+                        <img src="https://suwizx.com/wp-content/uploads/2021/10/lnwtumweb-mockup-768x441.png" alt="">
                     </div>
                     <div class="w-name">
                         <div>
@@ -427,53 +522,73 @@ a{
     </div>
 
     <script>
-
 console.log('Js loaded')
 
-        let profile_b = document.getElementById('block1')
+let profile_b = document.getElementById('block1')
 let edu_b = document.getElementById('block2')
 let work_b = document.getElementById('block3')
 let tab1 = document.getElementById('tab1')
 let tab2 = document.getElementById('tab2')
 let tab3 = document.getElementById('tab3')
+let dbg = document.getElementById('bg')
+
+let switchToggle=document.querySelector('input[type="checkbox"]');
+let toggleIcon=document.getElementById('toggle-icon');
+
 
 function ToEduTab(){
     profile_b.style.display = 'none'
     edu_b.style.display = 'block'
     work_b.style.display = 'none'
-    tab2.style.borderBottom = 'solid #f37335 5px'
-    tab2.style.color = '#f37335'
+    tab2.style.borderBottom = 'solid var(--primary-color) 5px'
+    tab2.style.color = 'var(--primary-color)'
     tab1.style.borderBottom = 'solid #fff 5px'
-    tab1.style.color = '#000'
+    tab1.style.color = 'var(--text-color)'
     tab3.style.borderBottom = 'solid #fff 5px'
-    tab3.style.color = '#000'
+    tab3.style.color = 'var(--text-color)'
 }
 
 function ToWorkTab(){
     profile_b.style.display = 'none'
     edu_b.style.display = 'none'
     work_b.style.display = 'block'
-    tab3.style.borderBottom = 'solid #f37335 5px'
-    tab3.style.color = '#f37335'
+    tab3.style.borderBottom = 'solid var(--primary-color) 5px'
+    tab3.style.color = 'var(--primary-color)'
     tab1.style.borderBottom = 'solid #fff 5px'
-    tab1.style.color = '#000'
+    tab1.style.color = 'var(--text-color)'
     tab2.style.borderBottom = 'solid #fff 5px'
-    tab2.style.color = '#000'
+    tab2.style.color = 'var(--text-color)'
 }
 
 function ToProfileTab(){
     profile_b.style.display = 'block'
     edu_b.style.display = 'none'
     work_b.style.display = 'none'
-    tab1.style.borderBottom = 'solid #f37335 5px'
-    tab1.style.color = '#f37335'
+    tab1.style.borderBottom = 'solid var(--primary-color) 5px'
+    tab1.style.color = 'var(--primary-color)'
     tab3.style.borderBottom = 'solid #fff 5px'
-    tab3.style.color = '#000'
+    tab3.style.color = 'var(--text-color)'
     tab2.style.borderBottom = 'solid #fff 5px'
-    tab2.style.color = '#000'
+    tab2.style.color = 'var(--text-color)'
 }
 
-
+function switchMode(e){
+    if(e.target.checked){
+         document.documentElement.setAttribute('data-theme','dark');
+         darkMode();
+    }else{
+         document.documentElement.setAttribute('data-theme','light');
+         lightMode();
+    }
+ }
+ function darkMode(){
+     toggleIcon.children[0].classList.replace('fa-sun','fa-moon');
+ }
+ function lightMode(){
+     toggleIcon.children[0].classList.replace('fa-moon','fa-sun');
+ }
+ 
+ switchToggle.addEventListener('change',switchMode);
 
     </script>
 
