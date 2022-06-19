@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สุวิจักขณ์ พรหมสถิตย์ - Suwijak Promsatid</title>
+    <link rel="shortcut icon" href="https://suwizx.com/wp-content/uploads/2021/10/222480414_871603333768925_176828813786078585_n.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+    transition: .2s;
+}
+
+@media only screen and (max-width: 600px) {
+    .main{
+        padding: 20px !important;
+    }
+    
+    .logo{
+        width: 33.33% !important;
+    }
+    
+    .s-name{
+        width: 66.66% !important;
+    }
+    .webimg{
+        width: 100% !important;        
+    }
+    
+    .w-name{
+        width: 100% !important;
+        padding: 0 0 10px 0 !important;
+    }
+
+    .web{
+        flex-wrap: wrap !important;
+    }
+}
+
+body{
+    background-image :linear-gradient(90deg, #fdc830, #f37335);
+}
+
+.main{
+    min-height: 80vh;
+    border-radius:20px ;
+    margin: 100px auto auto auto;
+    max-width: 800px;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.imgprof{
+    border: solid #fff 5px;
+    border-radius: 50%;
+    background-repeat : no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin: -100px auto;
+    width: 150px;
+    height: 150px;
+    background-image : url(https://suwizx.com/wp-content/uploads/2021/10/222480414_871603333768925_176828813786078585_n.jpg);
+}
+
+.container{
+    padding-top: 90px;
+}
+
+.tab{
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    border-bottom: solid 1px #C0C0C0;
+}
+
+#tab1,#tab2,#tab3{
+    display: flex;
+    padding: 8px 20px;
+    font-size: 1.1em;
+    background-color: transparent;
+    border-bottom: solid #fff 5px;
+}
+
+#tab1:hover,#tab2:hover,#tab3:hover{
+    border-bottom: solid #f37335 5px;
+    color: #f37335;
+    cursor: pointer;
+}
+
+#block1,#block2,#block3{
+    padding: 0 0;
+}
+
+h2{
+    padding-left:8px ;
+    border-left: solid #f37335 5px;
+    color: #f37335;
+}
+
+.social{
+    display: flex;
+}
+
+.fb{
+    background: #0366d6;
+    padding: 5px 15px;
+}
+
+.ig{
+    background-color: #8a3ab9;
+    padding:  8px;
+}
+
+.yt{
+    background-color:#ff0000;
+    padding:  8px;
+}
+
+.tw{
+    background-color:#009dff;
+    padding:  8px;
+}
+
+.fb,.ig,.tw,.yt{
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 100px;
+}
+
+.fb:hover,.ig:hover,.tw:hover,.yt:hover{
+    background-color: #000;
+}
+
+.gb-icon{
+    display: flex;
+    
+}
+
+.fb span.gb-icon{
+    padding-right: 5px;
+}
+
+.school{
+    display: flex;
+}
+
+.logo img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.logo{
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+
+.s-name{
+    padding-left: 10px;
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.web{
+    display: flex;
+    padding-bottom: 20px ;
+}
+
+.webimg img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.webimg{
+    width: 50%;
+    display: flex;
+    
+}
+
+.w-name{
+    padding-left: 10px;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn{
+    background-color: #f37335;
+    color: #fff;
+    padding: 15px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.btn:hover{
+    background-color: #000;
+}
+
+a{
+    color: #f37335;
+}
+    </style>
+    <div class="main">
+        <div class="imgprof"></div>
+        <div class="container">
+            <h1 align="center" style="font-size : 1.875em;">สุวิจักขณ์ พรหมสถิตย์</h1>
+            <div class="tab">
+                <button onclick="ToProfileTab()" id="tab1" style="border-bottom: solid #f37335 5px;
+                color: #f37335;">โพรไฟล์</button>
+                <button onclick="ToEduTab()" id="tab2">การศึกษา</button>
+                <button onclick="ToWorkTab()" id="tab3">ผลงาน</button>
+            </div>
+            <div id="block1">
+                <h2>ข้อมูลส่วนตัว</h2>
+                <h3> <mark style="background-color: transparent; color: #f37335;">ชื่อ :</mark> สุวิจักขณ์ พรหมสถิตย์
+                </h3>
+                <h3> <mark style="background-color: transparent; color: #f37335;">ชื่อเล่น :</mark> ปักษ์</h3>
+                <h3> <mark style="background-color: transparent; color: #f37335;">วันเกิด :</mark> 7 กรกฎาคม พ.ศ.2548
+                </h3>
+                <h3> <mark style="background-color: transparent; color: #f37335;">ความสามารถพิเศษ :</mark> WordPress,
+                    Photoshop, Illustrator, Premiere Pro</h3>
+                <h2>สังคมออนไลน์</h2>
+                <a class="fb" href="https://www.facebook.com/suwijak.promsatid.31" target="_blank"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em"
+                            viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor"
+                                d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z">
+                            </path>
+                        </svg></span>Suwijak Promsatid</a>
+                <a class="ig" href="https://www.instagram.com/suwizx_/" target="_blank"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em"
+                            viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor"
+                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                            </path>
+                        </svg></span></a>
+                <a class="yt" href="https://www.youtube.com/c/MrBearTH" target="_blank"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em"
+                            viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor"
+                                d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                            </path>
+                        </svg></span></a>
+                <a class="tw" href="https://twitter.com/user_suwijak" target="_blank"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em"
+                            viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor"
+                                d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z">
+                            </path>
+                        </svg></span></a>
+            </div>
+
+            <div id="block2" style="display: none;">
+                <h2>ระดับชั้นอนุบาล – ประถมศึกษาปีที่ 2</h2>
+                <div class="school">
+                    <div class="logo">
+                        <img src="https://suwizx.com/wp-content/uploads/2021/10/%E0%B8%AA%E0%B8%9E%E0%B8%90.png" alt="">
+                    </div>
+                    <div class="s-name">
+                        <div>
+                            <h3>โรงเรียนบ้านหนองโพธิ์ มิตรภาพที่ 129</h3>
+                            <h4>อำเภอหลังสวน จังหวัดชุมพร</h4>
+                        </div>
+                    </div>
+                </div>
+                <h2>ระดับชั้นประถมศึกษาปีที่ 3 – 6</h2>
+                <div class="school">
+                    <div class="logo">
+                        <img src="https://suwizx.com/wp-content/uploads/2021/10/27655441_2104983783068943_1060140701927941052_n.png"
+                            alt="">
+                    </div>
+                    <div class="s-name">
+                        <div>
+                            <h3>โรงเรียนหลังสวนเทศบาลอุปภัมภ์</h3>
+                            <h4>อำเภอหลังสวน จังหวัดชุมพร</h4>
+                        </div>
+                    </div>
+                </div>
+                <h2>ระดับชั้นมัธยมศึกษาปีที่ 1 – 3</h2>
+                <div class="school">
+                    <div class="logo">
+                        <img src="https://suwizx.com/wp-content/uploads/2021/10/channels4_profile.jpg" alt="">
+                    </div>
+                    <div class="s-name">
+                        <div>
+                            <h3>โรงเรียนสวนศรีวิทยา</h3>
+                            <h4>อำเภอหลังสวน จังหวัดชุมพร</h4>
+                        </div>
+                    </div>
+                </div>
+                <h2>ระดับชั้นมัธยมศึกษาปีที่ 4 – ปัจจุบัน</h2>
+                <div class="school">
+                    <div class="logo">
+                        <img src="https://suwizx.com/wp-content/uploads/2021/10/1200px-Sriyapai_School_Logo.png" alt="">
+                    </div>
+                    <div class="s-name">
+                        <div>
+                            <h3>โรงเรียนศรียาภัย</h3>
+                            <h4>อำเภอเมือง จังหวัดชุมพร</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="block3" style="display: none;">
+                <h2>ผลงานเว็บไซต์</h2>
+                <div class="web">
+                    <div class="webimg">
+                        <img src="https://suwizx.com/wp-content/uploads/2021/10/lnwtumweb-mockup-300x172.png" alt="">
+                    </div>
+                    <div class="w-name">
+                        <div>
+                            <h3>เว็บไซต์ เทพทำเว็บ</h3>
+                            <h4>เว็บไซต์สำหรับผู้ที่ต้องการศึกษาการทำเว็บไซต์</h4>
+                            <a class='btn' href="https://lnwtumweb.com/" target="_blank">ไปยัง lnwtumweb.com</a>
+                        </div>
+                    </div>
+                </div>
+                <h3 style="text-align: center;">ตัวอย่างเว็บไซต์</h3>
+
+                <div class="web">
+                    <div style="padding-left : 10px !important;" class="webimg">
+                        <ul>
+                            <li><a href="https://bpcare.lnwtumweb.com/" target="_blank">BP Care |
+                                    รวมเคล็ดไม่ลับดูแลคนที่คุณรัก (ตัวอย่างเว็บ
+                                    Blog สุขภาพ)</a></li>
+                            <li><a href="https://demo.lnwtumweb.com/relaxzone/" target="_blank">Home – Relax Zone
+                                    (ตัวอย่าง LandingPage)</a></li>
+                            <li><a href="https://lnwtumweb.com/linechatbot/" target="_blank"></a><a
+                                    href="https://lnwtumweb.com/linechatbot/" target="_blank">line Course – Sale Page
+                                    Demo
+                                    (ตัวอย่างเว็บ SalePage)</a></li>
+                        </ul>
+                    </div>
+
+                    <div style="padding-left: 10px !important;" class="w-name" >
+                        <ul>
+                            <li><a href="https://lnwtumweb.com/blog01/" target="_blank">WebBlog –
+                                    แค่เว็บเวิร์ดเพรสเว็บหนึ่ง
+                                    (ตัวอย่างเว็บข่าว)</a></li>
+                            <li><a href="https://demo.lnwtumweb.com/salepage/" target="_blank">WordPress Website – Just
+                                    another WordPress site (ตัวอย่าง
+                                    SalePage)</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2>รางวัลที่ได้รับ</h2>
+
+                <div class="web">
+                    <div class="webimg">
+                        <img src="https://suwizx.com/wp-content/uploads/2021/10/82593128_2734402940014597_6650176697968623616_n-1536x1097.jpg" alt="">
+                    </div>
+                    <div class="w-name">
+                        <div>
+                            <h3>ได้รับรางวัลชนะเลิศ ถ้วยรางวัลและเงินรางวัลรวม 290000 บาท โครงการกล้าใหม่ ใฝ่รู้ ปีที่ 14</h3>
+                            <h4>โครงการกล้าใหม่ ใฝ่รู้ ปีที่ 14 สนับสนุนโดยธนาคารไทยพาณิชย์ ระหว่างวันที่ 21-22 มกราคม 2563 ณ สำนักงานใหญ่ไทยพาณิชย์รัชโยธิน กรุงเทพฯ</h4>
+                            <a class='btn' href="https://www.facebook.com/SuansriwittayaSchool/photos/a.226170960837820/2734402933347931/" target="_blank">อ่านเพิ่มเติม</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="web">
+                    <div class="webimg">
+                        <img src="https://suwizx.com/wp-content/uploads/2021/10/73072185_402939047302025_8056721424473128960_n-1024x768.jpg" alt="">
+                    </div>
+                    <div class="w-name">
+                        <div>
+                            <h3>ได้รับเงินทุนสนับสนุนต่อยอดโครงการ 20000 บาท โครงการ Young Safe Internet Leader</h3>
+                            <h4>โครงการกล้าใหม่ ใฝ่รู้ ปีที่ 14 สนับสนุนโดยธนาคารไทยพาณิชย์ ระหว่างวันที่ 21-22 มกราคม 2563 ณ สำนักงานใหญ่ไทยพาณิชย์รัชโยธิน กรุงเทพฯ</h4>
+                            <a class='btn' href="https://dtacblog.co/yslc1-0/#alignnone%20size-full%20wp-image-5218" target="_blank">อ่านเพิ่มเติม</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="web">
+                    <div class="webimg">
+                        <img src="https://suwizx.com/wp-content/uploads/2021/10/82338070_2708020105986214_458070451235586048_n-1536x1097.jpg" alt="">
+                    </div>
+                    <div class="w-name">
+                        <div>
+                            <h3>ได้รับรางวัลชนะเลิศ เหรียญทอง การประกวดโครงงานคอมพิวเตอร์ประเภทซอฟต์แวร์ ม.1-ม.3</h3>
+                            <h4>งานศิลปหัตถกรรมนักเรียน ระดับชาติ ครั้งที่ 69 สังกัด สพม. ปีการศึกษา 2562 ณ จังหวัดนครศรีธรรมราช</h4>
+                            <a class='btn' target="_blank" href="https://www.facebook.com/SuansriwittayaSchool/photos/a.226170960837820/2708020102652881/">อ่านเพิ่มเติม</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="web">
+                    <div class="webimg">
+                        <img src="https://suwizx.com/wp-content/uploads/2021/10/49844115_2050387538416144_2704899531765448704_n-1536x1097.jpg" alt="">
+                    </div>
+                    <div class="w-name">
+                        <div>
+                            <h3>ได้รับรางวัลรองชนะเลิศอันดับ 1 เหรียญทอง การประกวดโครงงานคอมพิวเตอร์ประเภทซอฟต์แวร์ ม.1-ม.3</h3>
+                            <h4>งานมหกรรมความสามารถทางศิลปหัตถกรรม วิชาการและเทคโนโลยีของนักเรียน ระดับชาติ ปีการศึกษา 2561 จังหวัดตรัง</h4>
+                            <a class='btn' href="https://www.facebook.com/SuansriwittayaSchool/photos/a.226170960837820/2050387531749478/" target="_blank">อ่านเพิ่มเติม</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="web">
+                    <div class="webimg">
+                        <img src="https://suwizx.com/wp-content/uploads/2022/02/cert-1014-24949670-1536x1084.jpg" alt="">
+                    </div>
+                    <div class="w-name">
+                        <div>
+                            <h3 style="padding-bottom: 40px ;" >Sololearn HTML Certification</h3>
+                            <a class='btn' href="https://www.sololearn.com/learning/1014" target="_blank">ทำแบบทดสอบ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+
+console.log('Js loaded')
+
+        let profile_b = document.getElementById('block1')
+let edu_b = document.getElementById('block2')
+let work_b = document.getElementById('block3')
+let tab1 = document.getElementById('tab1')
+let tab2 = document.getElementById('tab2')
+let tab3 = document.getElementById('tab3')
+
+function ToEduTab(){
+    profile_b.style.display = 'none'
+    edu_b.style.display = 'block'
+    work_b.style.display = 'none'
+    tab2.style.borderBottom = 'solid #f37335 5px'
+    tab2.style.color = '#f37335'
+    tab1.style.borderBottom = 'solid #fff 5px'
+    tab1.style.color = '#000'
+    tab3.style.borderBottom = 'solid #fff 5px'
+    tab3.style.color = '#000'
+}
+
+function ToWorkTab(){
+    profile_b.style.display = 'none'
+    edu_b.style.display = 'none'
+    work_b.style.display = 'block'
+    tab3.style.borderBottom = 'solid #f37335 5px'
+    tab3.style.color = '#f37335'
+    tab1.style.borderBottom = 'solid #fff 5px'
+    tab1.style.color = '#000'
+    tab2.style.borderBottom = 'solid #fff 5px'
+    tab2.style.color = '#000'
+}
+
+function ToProfileTab(){
+    profile_b.style.display = 'block'
+    edu_b.style.display = 'none'
+    work_b.style.display = 'none'
+    tab1.style.borderBottom = 'solid #f37335 5px'
+    tab1.style.color = '#f37335'
+    tab3.style.borderBottom = 'solid #fff 5px'
+    tab3.style.color = '#000'
+    tab2.style.borderBottom = 'solid #fff 5px'
+    tab2.style.color = '#000'
+}
+
+
+
+    </script>
+
+</body>
+
+</html>
